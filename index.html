@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My protfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               <img src="Logo2.png" class="logo">
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Protfolio</a></li>
+                <li><a href="#">Contact</a></li>
+               </ul>
+            </nav>
+           <div class="header-text">
+            <p>Web Designer and Problem solver</p>
+            <h1>Hi, This is <span>Samia Alam</span><br> From Bangladesh.</h1>
+           </div>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div id="about">
+       <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="profile.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub">About Me</h1>
+                <p>I am samia.I wanted to be a professional  full stack Developer.Besides i used to solve programming 
+                    problem.In my free time, I read book and watch  tv series.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experiences')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Educations')">Education</p>
+                </div>
+                <!-- Skills -->
+ <div class="tab-contents active-tab" id="Skills">
+<ul>
+    <li><span>Web Developer</span><br>-Web designing</li>
+    <li><span>Programming</span><br>-Problems solving<br>-Algorithm</li>
+</ul>
+</div>
+            <!-- experiences -->
+<div class="tab-contents" id="Experiences">
+<ul>
+    <li><span>2023</span><br>Positioning 10th at national Girls Programming team contest in Bangladesh</li>
+    <li><span>2023</span><br>Hired for internship in TareZameenfoundation as a foundering</li>
+    <li><span>2022</span><br>Make a project in java language (Launch booking system)</li>
+
+
+</ul>
+</div>
+          <!-- Education -->
+<div class="tab-contents" id="Educations">
+ <ul>
+    <li><span>2019-Current</span><br>Studying as a 3rd year student in CSE Department at Jahangirnagar Univarcity<li>
+    <li><span>2019</span><br>HSC From Patuakhali Govt. Womens College</li>
+    <li><span>2017</span><br>SSC From Tejgaon Govt. High School.</li>
+
+    </ul>
+    </div>
+</div>
+</div>
+</div> 
+</div>
+
+<!-- Protfolio -->
+<div id="protfolio">
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="Launch.jpg" alt="Progamming Picture">
+            <div class="layer">
+                <h3>Launch Booking System</h3>
+                <p>By this project you can booking a ticket for your journey.</p>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+
+         <div class="work">
+            <img src="form.jpeg" alt="Web designing">
+            <div class="layer">
+                <h3>Responsive Registration Form</h3>
+                <p>In this form you can fill up your information which will store in database</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              
+            </div>
+        </div>
+       
+
+    </div>
+    <a href="#" class="btn">See more</a>
+    
+</div>
+</div>
+<!-- -----------contact------------ -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane fa-lg"></i>samiajucse@gmail.com</p> 
+            <p><i class="fa-solid fa-phone fa-lg"></i>01308428174</p>
+            <div class="social-icon">
+               
+                <a href="https://www.linkedin.com/in/samia-alam-a99435276/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://github.com/jucse-29"><i class="fa-brands fa-github fa-2xl"></i></a>
+            </div>
+            <a href="vc.pdf" download class="btn btn2"> Download CV</a>
+        </div>
+
+        <div class="contact-right">
+            <form>
+               <input type="text" name="Name" placeholder="Your Name" required>
+               <input type="email" name="email" placeholder="Your Email" required>
+               <textarea name="Message" rows="6" placeholder="Drop Your Message"></textarea>
+               <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+  </div>  
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+
+</html>
